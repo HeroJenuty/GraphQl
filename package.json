@@ -1,7 +1,7 @@
 {
   "name": "express-graphql-server",
   "version": "1.0.0",
-  "description": "Software Technologies Starter",
+  "description": "ST Book Project",
   "main": "server.js",
   "scripts": {
     "clean": "rm -rf build && mkdir build",
@@ -17,7 +17,7 @@
     "boilerplate",
     "server"
   ],
-  "author": "Alexander Petrov <apetrovdev@gmail.com>",
+  "author": "Nikola Varev",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",

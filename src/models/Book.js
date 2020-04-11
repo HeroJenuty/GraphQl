@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-const GameSchema = new Schema({
+const BookSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -16,11 +16,11 @@ const GameSchema = new Schema({
         required: true
     },
     price: {
-        type: String,
+        type: Number,
         required: true
     }
 })
 
-const Game = mongoose.model("Game", GameSchema);
+const Book = mongoose.model("Book", BookSchema);
 
-export default Game;
+export default Book;
