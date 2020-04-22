@@ -1,8 +1,8 @@
 import { mergeResolvers } from "merge-graphql-schemas";
 import User from "./User";
-import Book from "./Book";
+import Game from "./Game";
 //...
 
-const resolver = [User, Book];
+const resolver = [User, Game];
 
 export default mergeResolvers(resolver);

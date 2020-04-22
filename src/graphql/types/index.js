@@ -1,9 +1,9 @@
 import { mergeTypes } from "merge-graphql-schemas";
 import User from "./User";
-import Book from "./Book";
+import Game from "./Game";
 //...
 
-const typeDefs = [User, Book];
+const typeDefs = [User, Game];
 //...
 
 export default mergeTypes(typeDefs, { all: true });

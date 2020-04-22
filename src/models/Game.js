@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
-const BookSchema = new Schema({
+const GameSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -21,6 +21,6 @@ const BookSchema = new Schema({
     }
 })
 
-const Book = mongoose.model("Book", BookSchema);
+const Game = mongoose.model("Game", GameSchema);
 
-export default Book;
+export default Game;

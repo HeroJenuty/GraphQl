@@ -1,43 +1,43 @@
-import Book from "../../models/Book";
+import Game from "../../models/Game";
 import { response } from "express";
 
 
 export default {
     Query: {
-        book: (root, args) => {
+        game: (root, args) => {
             return new Promise((resolve, reject) => {
-                Book.findOne(args).exec((error, res) => {
+                Game.findOne(args).exec((error, res) => {
                     error ? reject(error) : resolve(response);
                 })
             })
         },
-        books: () => {
+        games: () => {
             return new Promise((resolve, reject) => {
-                Book.find({}).populate().exec((error, response) => {
+                Game.find({}).populate().exec((error, response) => {
                     error ? reject(error) : resolve(response);
                 })
             })
         }
     },
     Mutation: {
-        addBook: (root, { name, description, imageURL, price }) => {
-            const newBook = new Book({ uname, description, imageURL, price });
+        addGame: (root, { name, description, imageURL, price }) => {
+            const newGame = new Game({ uname, description, imageURL, price });
             return new Promise((resolve, reject) => {
-                newBook.save((error, response) => {
+                newGame.save((error, response) => {
                     error ? reject(error) : resolve(response);
                 })
             })
         },
-        deleteBook: (root, { _id }) => {
+        deleteGame: (root, { _id }) => {
             return new Promise((resolve, reject) => {
-                Book.findByIdAndRemove({ _id }).exec((error, response) => {
+                Game.findByIdAndRemove({ _id }).exec((error, response) => {
                     error ? reject : resolve(response)
                 })
             })
         },
-        editBook: (root, { _id, name, description, imageURL, price }) => {
+        editGame: (root, { _id, name, description, imageURL, price }) => {
             return new Promise((resolve, reject) => {
-                Book.findByIdAndUpdate({ _id }, { $set: { username, email, password } }, { new: true }).exec((error, response) => {
+                Game.findByIdAndUpdate({ _id }, { $set: { username, email, password } }, { new: true }).exec((error, response) => {
                     error ? reject : resolve(response)
                 })
             })
