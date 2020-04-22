@@ -21,7 +21,7 @@ export default {
     },
     Mutation: {
         addGame: (root, { name, description, imageURL, price }) => {
-            const newGame = new Game({ uname, description, imageURL, price });
+            const newGame = new Game({ name, description, imageURL, price });
             return new Promise((resolve, reject) => {
                 newGame.save((error, response) => {
                     error ? reject(error) : resolve(response);
