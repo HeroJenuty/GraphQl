@@ -127,7 +127,7 @@ export default {
                 {
                     expiresIn: '1d'
                 }
-            )
+            );
         },
         deleteUser: (root, { _id }) => {
             return new Promise((resolve, reject) => {
