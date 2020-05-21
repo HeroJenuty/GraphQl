@@ -13,3 +13,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 # dotenv environment variables file
+.env
