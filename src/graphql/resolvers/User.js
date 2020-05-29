@@ -151,6 +151,24 @@ export default {
                 throw new Error(`Cannot save user: ${_id}`);
             }
             return response;
-        }
+        },
+
+        addGameToUser: async (root, { _id, games }) => {
+            const user = await User.findOne({ email });
+            if (!user) {
+                throw new Error(`Cannot find user with email: ${email}`)
+            }
+
+            const response = await User.findByIdAndUpdate({ _id }, {
+                $set: {
+                    games
+                }
+            }, { new: true }).exec();
+
+            if (!response) {
+                throw new Error(`Cannot save user: ${_id}`);
+            }
+            return response;
+        },
     }
 }
