@@ -154,10 +154,6 @@ export default {
         },
 
         addGameToUser: async (root, { _id, games }) => {
-            const user = await User.findOne({ email });
-            if (!user) {
-                throw new Error(`Cannot find user with email: ${email}`)
-            }
 
             const response = await User.findByIdAndUpdate({ _id }, {
                 $set: {
