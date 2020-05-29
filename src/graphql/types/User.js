@@ -21,7 +21,7 @@ export default `
         login(email: String!, password: String!): String
         deleteUser(_id: String!): User
         editUser(_id: String!, firstName: String!, lastName: String!, password: String!): User
-        addGameToUser (_id: String!, games:[Game]): User
+        addGameToUser (_id: String!, games:[GameInput]): User
     }
 
 `
